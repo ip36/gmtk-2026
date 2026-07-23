@@ -1,0 +1,54 @@
+[gd_scene format=3 uid="uid://ksunwb8hs2oe"]
+
+[ext_resource type="Theme" uid="uid://be8smmq0ql3ip" path="res://labeltheme.tres" id="1_1n0d2"]
+[ext_resource type="Theme" uid="uid://bci3f3stek4v5" path="res://buttontheme.tres" id="2_y5hus"]
+[ext_resource type="Script" uid="uid://b3wdkidg8nbi" path="res://scenechangerbutton.gd" id="3_oiuna"]
+
+[node name="Control" type="Control" unique_id=1988858873]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="ColorRect" type="ColorRect" parent="." unique_id=1750457908]
+z_index = -1
+layout_mode = 0
+offset_right = 1567.0
+offset_bottom = 921.0
+
+[node name="CenterContainer" type="CenterContainer" parent="." unique_id=526808403]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="VBoxContainer" type="VBoxContainer" parent="CenterContainer" unique_id=1840460492]
+layout_mode = 2
+
+[node name="Label" type="Label" parent="CenterContainer/VBoxContainer" unique_id=2104288731]
+layout_mode = 2
+theme = ExtResource("1_1n0d2")
+text = "Game name"
+
+[node name="Button" type="Button" parent="CenterContainer/VBoxContainer" unique_id=172891904]
+layout_mode = 2
+theme = ExtResource("2_y5hus")
+text = "New game"
+script = ExtResource("3_oiuna")
+
+[node name="Button2" type="Button" parent="CenterContainer/VBoxContainer" unique_id=705145309]
+layout_mode = 2
+theme = ExtResource("2_y5hus")
+text = "Level Select"
+script = ExtResource("3_oiuna")
+
+[node name="Button3" type="Button" parent="CenterContainer/VBoxContainer" unique_id=962306126]
+layout_mode = 2
+theme = ExtResource("2_y5hus")
+text = "Options"
+script = ExtResource("3_oiuna")
+where = "options"
