@@ -1,0 +1,56 @@
+[gd_scene format=3 uid="uid://de0n66k81eic3"]
+
+[ext_resource type="Texture2D" uid="uid://cp4khiecalw6m" path="res://Chest/Chest Open 01.png" id="1_t3ekh"]
+[ext_resource type="Texture2D" uid="uid://bbll051bxc4d" path="res://Chest/Chest Open 02.png" id="2_x6u83"]
+[ext_resource type="Texture2D" uid="uid://c2b5akeuith6x" path="res://Chest/Chest Open 03.png" id="3_v4ow6"]
+[ext_resource type="Texture2D" uid="uid://dhdybddpirdyi" path="res://Chest/Chest Open 04.png" id="4_oh7c0"]
+[ext_resource type="Texture2D" uid="uid://cvsniat6a85wx" path="res://Chest/Chest Open 05.png" id="5_q6g14"]
+[ext_resource type="Texture2D" uid="uid://dx8166jm3v3v7" path="res://Chest/Chest Open 06.png" id="6_p5wy1"]
+[ext_resource type="Script" uid="uid://c3wadvs6okqsn" path="res://chest.gd" id="8_7n0ts"]
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_wicfh"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("1_t3ekh")
+}, {
+"duration": 1.0,
+"texture": ExtResource("2_x6u83")
+}, {
+"duration": 1.0,
+"texture": ExtResource("3_v4ow6")
+}, {
+"duration": 1.0,
+"texture": ExtResource("4_oh7c0")
+}, {
+"duration": 1.0,
+"texture": ExtResource("5_q6g14")
+}, {
+"duration": 1.0,
+"texture": ExtResource("6_p5wy1")
+}],
+"loop": 0,
+"name": &"default",
+"speed": 5.0
+}]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_wicfh"]
+size = Vector2(64, 40)
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" unique_id=1920964518]
+sprite_frames = SubResource("SpriteFrames_wicfh")
+script = ExtResource("8_7n0ts")
+
+[node name="ColorRect" type="ColorRect" parent="." unique_id=181671948]
+offset_left = -3176.0
+offset_top = -2264.0
+offset_right = 3176.0
+offset_bottom = 2088.0
+mouse_filter = 2
+color = Color(1, 1, 1, 0)
+
+[node name="Area2D" type="Area2D" parent="." unique_id=1727511437]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D" unique_id=1146832007]
+position = Vector2(0, 4)
+shape = SubResource("RectangleShape2D_wicfh")
