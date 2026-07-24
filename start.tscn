@@ -35,20 +35,34 @@ theme = ExtResource("1_1n0d2")
 text = "Game name"
 
 [node name="Button" type="Button" parent="CenterContainer/VBoxContainer" unique_id=172891904]
+custom_minimum_size = Vector2(0, 100)
 layout_mode = 2
 theme = ExtResource("2_y5hus")
-text = "New game"
+text = "New Game"
+flat = true
+icon_alignment = 1
+expand_icon = true
 script = ExtResource("3_oiuna")
+where = "options"
 
 [node name="Button2" type="Button" parent="CenterContainer/VBoxContainer" unique_id=705145309]
+custom_minimum_size = Vector2(0, 100)
 layout_mode = 2
 theme = ExtResource("2_y5hus")
-text = "Level Select"
+text = "Level select"
+flat = true
+icon_alignment = 1
+expand_icon = true
 script = ExtResource("3_oiuna")
+where = "levelselect"
 
 [node name="Button3" type="Button" parent="CenterContainer/VBoxContainer" unique_id=962306126]
+custom_minimum_size = Vector2(0, 100)
 layout_mode = 2
 theme = ExtResource("2_y5hus")
 text = "Options"
+flat = true
+icon_alignment = 1
+expand_icon = true
 script = ExtResource("3_oiuna")
 where = "options"
