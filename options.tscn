@@ -2,6 +2,7 @@
 
 [ext_resource type="Theme" uid="uid://bci3f3stek4v5" path="res://buttontheme.tres" id="1_se8ut"]
 [ext_resource type="Script" uid="uid://b3wdkidg8nbi" path="res://scenechangerbutton.gd" id="2_ao2gm"]
+[ext_resource type="Script" uid="uid://b4fbegtg5g8bo" path="res://keybindbutton.gd" id="3_ao2gm"]
 
 [node name="Control" type="Control" unique_id=369390808]
 layout_mode = 3
@@ -10,6 +11,21 @@ anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
+
+[node name="Button" type="Button" parent="." unique_id=225573277]
+custom_minimum_size = Vector2(490, 100)
+layout_mode = 0
+offset_left = 329.0
+offset_top = 509.0
+offset_right = 819.0
+offset_bottom = 609.0
+theme = ExtResource("1_se8ut")
+text = "Back"
+flat = true
+icon_alignment = 1
+expand_icon = true
+script = ExtResource("2_ao2gm")
+where = "options"
 
 [node name="ColorRect" type="ColorRect" parent="." unique_id=851929200]
 z_index = -1
@@ -25,12 +41,55 @@ anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
 
-[node name="VBoxContainer" type="VBoxContainer" parent="CenterContainer" unique_id=221075578]
+[node name="VBoxContainer" type="GridContainer" parent="CenterContainer" unique_id=450882069]
 layout_mode = 2
+theme_override_constants/v_separation = 30
+columns = 2
 
-[node name="Button" type="Button" parent="CenterContainer/VBoxContainer" unique_id=225573277]
+[node name="Button2" type="Button" parent="CenterContainer/VBoxContainer" unique_id=739528113]
+custom_minimum_size = Vector2(490, 150)
 layout_mode = 2
 theme = ExtResource("1_se8ut")
-text = "Back"
-script = ExtResource("2_ao2gm")
-where = "start"
+text = "Change keybind:
+left"
+flat = true
+icon_alignment = 1
+expand_icon = true
+script = ExtResource("3_ao2gm")
+InputToRebind = "left"
+
+[node name="Button3" type="Button" parent="CenterContainer/VBoxContainer" unique_id=2033077439]
+custom_minimum_size = Vector2(490, 150)
+layout_mode = 2
+theme = ExtResource("1_se8ut")
+text = "Change keybind:
+right"
+flat = true
+icon_alignment = 1
+expand_icon = true
+script = ExtResource("3_ao2gm")
+InputToRebind = "right"
+
+[node name="Button4" type="Button" parent="CenterContainer/VBoxContainer" unique_id=651373663]
+custom_minimum_size = Vector2(490, 150)
+layout_mode = 2
+theme = ExtResource("1_se8ut")
+text = "Change keybind:
+jump"
+flat = true
+icon_alignment = 1
+expand_icon = true
+script = ExtResource("3_ao2gm")
+InputToRebind = "jump"
+
+[node name="Button5" type="Button" parent="CenterContainer/VBoxContainer" unique_id=258060211]
+custom_minimum_size = Vector2(490, 150)
+layout_mode = 2
+theme = ExtResource("1_se8ut")
+text = "Change keybind:
+left"
+flat = true
+icon_alignment = 1
+expand_icon = true
+script = ExtResource("3_ao2gm")
+InputToRebind = "left"

@@ -1,4 +1,10 @@
 [gd_resource type="Theme" format=3 uid="uid://bci3f3stek4v5"]
 
+[ext_resource type="Texture2D" uid="uid://cnk0mgevv747j" path="res://UI/merged.png" id="1_8jv51"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_165cj"]
+
 [resource]
 Button/font_sizes/font_size = 32
+Button/icons/icon = ExtResource("1_8jv51")
+Button/styles/normal = SubResource("StyleBoxFlat_165cj")
