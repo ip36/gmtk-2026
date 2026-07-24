@@ -5,6 +5,12 @@
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_wicfh"]
 size = Vector2(32, 64)
 
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_4flbx"]
+bg_color = Color(0, 0, 0, 0.3019608)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_onrkg"]
+bg_color = Color(0.7, 0.20300001, 0.20300001, 1)
+
 [node name="CharacterBody2D" type="CharacterBody2D" unique_id=815054142]
 script = ExtResource("1_4flbx")
 
@@ -16,5 +22,23 @@ enabled = false
 zoom = Vector2(2.025, 2.025)
 limit_left = 160
 limit_top = -8
-limit_right = 1152
+limit_right = 3011
 limit_bottom = 648
+
+[node name="ProgressBar" type="ProgressBar" parent="." unique_id=109839542]
+visible = false
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -47.36
+offset_top = -56.0
+offset_right = 51.925003
+offset_bottom = -42.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_styles/background = SubResource("StyleBoxFlat_4flbx")
+theme_override_styles/fill = SubResource("StyleBoxFlat_onrkg")
+max_value = 1.0
+show_percentage = false

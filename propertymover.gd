@@ -3,7 +3,7 @@ var moving
 @onready var origparent = get_parent()
 var root
 @export var texture : String
-enum PropertyKey {size, speed, jump, gravity, block_size, world_size}
+enum PropertyKey {size, speed, jump, gravity, block_size, world_size, health}
 @export var property: PropertyKey
 
 func _ready() -> void:
