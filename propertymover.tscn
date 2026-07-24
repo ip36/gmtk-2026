@@ -1,0 +1,130 @@
+[gd_scene format=3 uid="uid://dt0dgop73ssd1"]
+
+[ext_resource type="Script" uid="uid://mjlxpn8fdy2h" path="res://propertymover.gd" id="1_n4cvb"]
+[ext_resource type="Script" uid="uid://berp2m73t111l" path="res://property-changer.gd" id="2_gxxnc"]
+[ext_resource type="Texture2D" uid="uid://b5bx1akfeotgb" path="res://Blue Potion/01.png" id="3_mwvs5"]
+[ext_resource type="Texture2D" uid="uid://xwtev8olumx2" path="res://Blue Potion/02.png" id="4_bcepb"]
+[ext_resource type="Texture2D" uid="uid://c3v1w81ooin5p" path="res://Blue Potion/03.png" id="5_11grp"]
+[ext_resource type="Texture2D" uid="uid://cn7wvjo2p4hl" path="res://Blue Potion/04.png" id="6_khevc"]
+[ext_resource type="Texture2D" uid="uid://b2bh2nper3gsq" path="res://Blue Potion/05.png" id="7_x8cci"]
+[ext_resource type="Texture2D" uid="uid://cdwl1lpg0ydqk" path="res://Blue Potion/06.png" id="8_hp716"]
+[ext_resource type="Texture2D" uid="uid://cxkk57w4d52qt" path="res://Blue Potion/07.png" id="9_x1oxp"]
+[ext_resource type="Texture2D" uid="uid://d17dy06eiqkn4" path="res://Green Bottle/01.png" id="10_08u41"]
+[ext_resource type="Texture2D" uid="uid://dqs1ov5uv7qgu" path="res://Green Bottle/02.png" id="11_7kv0t"]
+[ext_resource type="Texture2D" uid="uid://dnhlfxue03x0q" path="res://Green Bottle/03.png" id="12_t4drh"]
+[ext_resource type="Texture2D" uid="uid://drww0gi4eipr8" path="res://Green Bottle/04.png" id="13_503p3"]
+[ext_resource type="Texture2D" uid="uid://rkv8n6g15aga" path="res://Green Bottle/05.png" id="14_7h346"]
+[ext_resource type="Texture2D" uid="uid://dlbkyw3qs8hir" path="res://Green Bottle/06.png" id="15_36mrl"]
+[ext_resource type="Texture2D" uid="uid://b4t2b4imh5jcq" path="res://Green Bottle/07.png" id="16_dglsp"]
+[ext_resource type="Texture2D" uid="uid://cio8261isdodn" path="res://Red Potion/01.png" id="17_1hb2s"]
+[ext_resource type="Texture2D" uid="uid://d3de8napjea4s" path="res://Red Potion/02.png" id="18_lsry3"]
+[ext_resource type="Texture2D" uid="uid://cykqbu0cmnatj" path="res://Red Potion/03.png" id="19_mjgkx"]
+[ext_resource type="Texture2D" uid="uid://dhfxt8u85yw0e" path="res://Red Potion/04.png" id="20_86v0d"]
+[ext_resource type="Texture2D" uid="uid://byaiibnpk8p6j" path="res://Red Potion/05.png" id="21_kqbfk"]
+[ext_resource type="Texture2D" uid="uid://bybhpgtb8evb" path="res://Red Potion/06.png" id="22_1s4vr"]
+[ext_resource type="Texture2D" uid="uid://d2gkr6yhk5d5q" path="res://Red Potion/07.png" id="23_1ri5x"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_fm7u8"]
+size = Vector2(32, 32)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_wicfh"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("3_mwvs5")
+}, {
+"duration": 1.0,
+"texture": ExtResource("4_bcepb")
+}, {
+"duration": 1.0,
+"texture": ExtResource("5_11grp")
+}, {
+"duration": 1.0,
+"texture": ExtResource("6_khevc")
+}, {
+"duration": 1.0,
+"texture": ExtResource("7_x8cci")
+}, {
+"duration": 1.0,
+"texture": ExtResource("8_hp716")
+}, {
+"duration": 1.0,
+"texture": ExtResource("9_x1oxp")
+}],
+"loop": 1,
+"name": &"blue",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("10_08u41")
+}, {
+"duration": 1.0,
+"texture": ExtResource("11_7kv0t")
+}, {
+"duration": 1.0,
+"texture": ExtResource("12_t4drh")
+}, {
+"duration": 1.0,
+"texture": ExtResource("13_503p3")
+}, {
+"duration": 1.0,
+"texture": ExtResource("14_7h346")
+}, {
+"duration": 1.0,
+"texture": ExtResource("15_36mrl")
+}, {
+"duration": 1.0,
+"texture": ExtResource("16_dglsp")
+}],
+"loop": 1,
+"name": &"green",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("17_1hb2s")
+}, {
+"duration": 1.0,
+"texture": ExtResource("18_lsry3")
+}, {
+"duration": 1.0,
+"texture": ExtResource("19_mjgkx")
+}, {
+"duration": 1.0,
+"texture": ExtResource("20_86v0d")
+}, {
+"duration": 1.0,
+"texture": ExtResource("21_kqbfk")
+}, {
+"duration": 1.0,
+"texture": ExtResource("22_1s4vr")
+}, {
+"duration": 1.0,
+"texture": ExtResource("23_1ri5x")
+}],
+"loop": 1,
+"name": &"red",
+"speed": 5.0
+}]
+
+[node name="Button" type="Button" unique_id=1337859041]
+custom_minimum_size = Vector2(32, 32)
+offset_left = -16.0
+offset_top = -16.0
+offset_right = 16.0
+offset_bottom = 16.0
+script = ExtResource("1_n4cvb")
+
+[node name="Area2D" type="Area2D" parent="." unique_id=314496155]
+script = ExtResource("2_gxxnc")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D" unique_id=129221405]
+position = Vector2(16, 16)
+shape = SubResource("RectangleShape2D_fm7u8")
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." unique_id=463095141]
+position = Vector2(16, 16)
+scale = Vector2(1.846154, 1.846154)
+sprite_frames = SubResource("SpriteFrames_wicfh")
+animation = &"red"
