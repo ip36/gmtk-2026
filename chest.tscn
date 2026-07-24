@@ -38,6 +38,7 @@ animations = [{
 size = Vector2(64, 40)
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" unique_id=1920964518]
+process_mode = 3
 sprite_frames = SubResource("SpriteFrames_wicfh")
 script = ExtResource("8_7n0ts")
 

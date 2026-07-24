@@ -11,6 +11,7 @@ func fade() -> void:
 func collected(who) -> void:
 	if who.is_in_group("player"):
 		play()
+		get_tree().paused = true
 
 func _process(delta: float) -> void:
 	if fading:
