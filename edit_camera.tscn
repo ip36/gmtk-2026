@@ -1,0 +1,8 @@
+[gd_scene format=3 uid="uid://b8sr4ylekkbt7"]
+
+[ext_resource type="Script" uid="uid://c1ruwr4106q8t" path="res://edit_camera.gd" id="1_u7ey7"]
+
+[node name="EditCamera" type="Camera2D" unique_id=467533933 groups=["editcamera"]]
+process_mode = 3
+script = ExtResource("1_u7ey7")
+cam_speed = 250.0
