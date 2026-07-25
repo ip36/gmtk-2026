@@ -1,4 +1,4 @@
-[gd_scene format=4 uid="uid://xe5d7ubbary"]
+[gd_scene format=4 uid="uid://dcdaa3w7gxdcy"]
 
 [ext_resource type="PackedScene" uid="uid://ctayfrsk7hvj5" path="res://player.tscn" id="1_au0y0"]
 [ext_resource type="Texture2D" uid="uid://cafgfqjwwfiac" path="res://Terrain (32x32).png" id="2_ndftt"]
@@ -171,6 +171,12 @@ metadata/_custom_type_script = "uid://bvihome1dq161"
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_l2g56"]
 size = Vector2(162, 16)
 
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_ndftt"]
+size = Vector2(162, 16)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_eiavb"]
+size = Vector2(162, 16)
+
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_7njdi"]
 size = Vector2(162, 16)
 
@@ -207,11 +213,11 @@ shape = SubResource("RectangleShape2D_l2g56")
 
 [node name="CollisionShape2D2" type="CollisionShape2D" parent="Area2D" unique_id=418904352]
 position = Vector2(944, 538)
-shape = SubResource("RectangleShape2D_7njdi")
+shape = SubResource("RectangleShape2D_ndftt")
 
 [node name="CollisionShape2D3" type="CollisionShape2D" parent="Area2D" unique_id=534809283]
 position = Vector2(1200, 538)
-shape = SubResource("RectangleShape2D_7njdi")
+shape = SubResource("RectangleShape2D_eiavb")
 
 [node name="CollisionShape2D4" type="CollisionShape2D" parent="Area2D" unique_id=813999555]
 position = Vector2(1457, 538)
