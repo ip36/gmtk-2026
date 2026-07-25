@@ -7,7 +7,7 @@
 [ext_resource type="PackedScene" uid="uid://b8sr4ylekkbt7" path="res://edit_camera.tscn" id="5_ndftt"]
 [ext_resource type="Script" uid="uid://bvihome1dq161" path="res://pickup_resource.gd" id="6_au0y0"]
 [ext_resource type="PackedScene" uid="uid://de0n66k81eic3" path="res://chest.tscn" id="7_quqa1"]
-[ext_resource type="Script" uid="uid://p3aaquet78tp" path="res://spikes.gd" id="9_eiavb"]
+[ext_resource type="Script" uid="uid://p3aaquet78tp" path="res://spikes.gd" id="8_eiavb"]
 [ext_resource type="PackedScene" uid="uid://bsxdnma2vgcy1" path="res://keybinds_legend_ui.tscn" id="9_eiavb"]
 
 [sub_resource type="Gradient" id="Gradient_ndftt"]
@@ -140,15 +140,6 @@ sources/2 = SubResource("TileSetAtlasSource_ehkex")
 sources/3 = SubResource("TileSetAtlasSource_xersf")
 sources/4 = SubResource("TileSetAtlasSource_00tp4")
 
-[sub_resource type="RectangleShape2D" id="RectangleShape2D_l2g56"]
-size = Vector2(162, 16)
-
-[sub_resource type="RectangleShape2D" id="RectangleShape2D_7njdi"]
-size = Vector2(162, 16)
-
-[sub_resource type="RectangleShape2D" id="RectangleShape2D_qnive"]
-size = Vector2(1220, 16)
-
 [sub_resource type="Resource" id="Resource_xmtmr"]
 script = ExtResource("6_au0y0")
 name = "Size"
@@ -176,6 +167,15 @@ property = 6
 texture = "red"
 metadata/_custom_type_script = "uid://bvihome1dq161"
 
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_l2g56"]
+size = Vector2(162, 16)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_7njdi"]
+size = Vector2(162, 16)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_qnive"]
+size = Vector2(1220, 16)
+
 [node name="Node2D" type="Node2D" unique_id=1730583942 groups=["root"]]
 
 [node name="Background" type="Sprite2D" parent="." unique_id=626175578]
@@ -198,7 +198,7 @@ level_pickups = Array[ExtResource("6_au0y0")]([SubResource("Resource_xmtmr"), Su
 position = Vector2(1639, 463)
 
 [node name="Area2D" type="Area2D" parent="." unique_id=794373280]
-script = ExtResource("9_eiavb")
+script = ExtResource("8_eiavb")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D" unique_id=527867073]
 position = Vector2(688, 538)

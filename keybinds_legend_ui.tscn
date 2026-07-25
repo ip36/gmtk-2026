@@ -10,10 +10,12 @@ anchor_bottom = 1.0
 offset_top = -45.0
 grow_horizontal = 2
 grow_vertical = 0
+mouse_filter = 2
 alignment = 1
 
 [node name="RestartLevelLabel" type="RichTextLabel" parent="HBoxContainer" unique_id=809349457]
 layout_mode = 2
+mouse_filter = 2
 bbcode_enabled = true
 text = "[img width=30]res://Keyboard R.png[/img] Restart Level"
 fit_content = true

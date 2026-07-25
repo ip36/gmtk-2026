@@ -26,6 +26,7 @@ func _ready() -> void:
 		changing_blocks.append(i)
 	
 	health_bar.visible = false
+	$TextureRect.visible = false
 	health_bar.max_value = properties["health"]
 
 func _process(delta: float) -> void:
@@ -52,6 +53,7 @@ func _process(delta: float) -> void:
 					i.scale -= (Vector2(reductions[4], reductions[4]) * delta)
 		elif current_countdown == "health":
 			health_bar.visible = true
+			$TextureRect.visible = true
 			properties["health"] -= delta
 			health_bar.value = properties["health"]
 			if properties["health"] <= 0.0:

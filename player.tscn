@@ -18,6 +18,7 @@
 [ext_resource type="Texture2D" uid="uid://hq13ef4863s4" path="res://Player/02-Run/Run 06.png" id="16_j5n4i"]
 [ext_resource type="Texture2D" uid="uid://dbc6luwe0vjsa" path="res://Player/Particles.png" id="17_op7ga"]
 [ext_resource type="AudioStream" uid="uid://dsq71q5jaj5qa" path="res://switch13.ogg" id="18_q13i1"]
+[ext_resource type="Texture2D" uid="uid://cnk0mgevv747j" path="res://UI/merged.png" id="19_pylmc"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_wicfh"]
 size = Vector2(32, 48)
@@ -155,16 +156,16 @@ limit_right = 3011
 limit_bottom = 648
 
 [node name="HealthBar" type="ProgressBar" parent="." unique_id=109839542]
-visible = false
+z_index = 1
 anchors_preset = 8
 anchor_left = 0.5
 anchor_top = 0.5
 anchor_right = 0.5
 anchor_bottom = 0.5
-offset_left = -47.36
+offset_left = -37.0
 offset_top = -56.0
-offset_right = 51.925003
-offset_bottom = -42.0
+offset_right = 37.0
+offset_bottom = -40.0
 grow_horizontal = 2
 grow_vertical = 2
 theme_override_styles/background = SubResource("StyleBoxFlat_4flbx")
@@ -190,5 +191,12 @@ frame_progress = 0.736108
 [node name="TickDownSound" type="AudioStreamPlayer" parent="." unique_id=1115242029]
 stream = ExtResource("18_q13i1")
 volume_db = -16.697
-bus = &"Tick"
 parameters/looping = true
+
+[node name="TextureRect" type="TextureRect" parent="." unique_id=2019028353]
+offset_left = -46.64
+offset_top = -64.0
+offset_right = 47.36
+offset_bottom = -32.0
+texture = ExtResource("19_pylmc")
+stretch_mode = 4
