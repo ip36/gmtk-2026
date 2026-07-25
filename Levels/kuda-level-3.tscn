@@ -9,6 +9,7 @@
 [ext_resource type="PackedScene" uid="uid://de0n66k81eic3" path="res://chest.tscn" id="7_quqa1"]
 [ext_resource type="Script" uid="uid://p3aaquet78tp" path="res://spikes.gd" id="8_eiavb"]
 [ext_resource type="PackedScene" uid="uid://bsxdnma2vgcy1" path="res://keybinds_legend_ui.tscn" id="9_eiavb"]
+[ext_resource type="PackedScene" uid="uid://carh78kg05v6t" path="res://countdown_ui.tscn" id="10_l2g56"]
 
 [sub_resource type="Gradient" id="Gradient_ndftt"]
 offsets = PackedFloat32Array(0)
@@ -183,7 +184,7 @@ position = Vector2(1440.8125, 324.84363)
 scale = Vector2(45.86084, 6593.688)
 texture = SubResource("GradientTexture1D_vyatj")
 
-[node name="Player" parent="." unique_id=815054142 groups=["player"] instance=ExtResource("1_au0y0")]
+[node name="Player" parent="." unique_id=815054142 instance=ExtResource("1_au0y0")]
 position = Vector2(260, 303)
 
 [node name="TileMapLayer" type="TileMapLayer" parent="." unique_id=1316181702]
@@ -221,3 +222,5 @@ position = Vector2(1089, 103)
 shape = SubResource("RectangleShape2D_qnive")
 
 [node name="KeybindsLegendUI" parent="." unique_id=1630838996 instance=ExtResource("9_eiavb")]
+
+[node name="CountdownUI" parent="." unique_id=1041481789 instance=ExtResource("10_l2g56")]

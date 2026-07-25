@@ -9,6 +9,7 @@
 [ext_resource type="PackedScene" uid="uid://de0n66k81eic3" path="res://chest.tscn" id="8_3mben"]
 [ext_resource type="Script" uid="uid://p3aaquet78tp" path="res://spikes.gd" id="9_4uphq"]
 [ext_resource type="PackedScene" uid="uid://bsxdnma2vgcy1" path="res://keybinds_legend_ui.tscn" id="10_72gsb"]
+[ext_resource type="PackedScene" uid="uid://carh78kg05v6t" path="res://countdown_ui.tscn" id="11_e7db6"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_ehkex"]
 texture = ExtResource("2_4uphq")
@@ -144,7 +145,7 @@ size = Vector2(224, 16)
 
 [node name="Node2D" type="Node2D" unique_id=1730583942 groups=["root"]]
 
-[node name="CharacterBody2D" parent="." unique_id=815054142 groups=["player"] instance=ExtResource("1_bqi24")]
+[node name="CharacterBody2D" parent="." unique_id=815054142 instance=ExtResource("1_bqi24")]
 position = Vector2(256, 192)
 
 [node name="TileMapLayer" type="TileMapLayer" parent="." unique_id=1316181702]
@@ -166,3 +167,5 @@ position = Vector2(464, 424)
 shape = SubResource("RectangleShape2D_72gsb")
 
 [node name="KeybindsLegendUI" parent="." unique_id=1630838996 instance=ExtResource("10_72gsb")]
+
+[node name="CountdownUI" parent="." unique_id=1041481789 instance=ExtResource("11_e7db6")]
