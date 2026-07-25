@@ -5,7 +5,7 @@ extends CharacterBody2D
 	"fallspeed" = 1000.0,
 	"blocksize" = 1.0,
 	"worldsize" = 1.0,
-	"health" = 5.0}
+	"health" = 6.5}
 var reductions = []
 var current_countdown
 var current_countdown_index
