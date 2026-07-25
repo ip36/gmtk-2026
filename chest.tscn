@@ -7,6 +7,7 @@
 [ext_resource type="Texture2D" uid="uid://cvsniat6a85wx" path="res://Chest/Chest Open 05.png" id="5_q6g14"]
 [ext_resource type="Texture2D" uid="uid://dx8166jm3v3v7" path="res://Chest/Chest Open 06.png" id="6_p5wy1"]
 [ext_resource type="Script" uid="uid://c3wadvs6okqsn" path="res://chest.gd" id="8_7n0ts"]
+[ext_resource type="AudioStream" uid="uid://dqv6fpo68yo1p" path="res://Celebration.wav" id="8_t3ekh"]
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_wicfh"]
 animations = [{
@@ -55,3 +56,6 @@ color = Color(1, 1, 1, 0)
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D" unique_id=1146832007]
 shape = SubResource("RectangleShape2D_wicfh")
+
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="." unique_id=362839066]
+stream = ExtResource("8_t3ekh")

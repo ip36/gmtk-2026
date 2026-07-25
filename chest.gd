@@ -10,6 +10,7 @@ func fade() -> void:
 
 func collected(who) -> void:
 	if who.is_in_group("player"):
+		$AudioStreamPlayer.play()
 		play()
 		get_tree().paused = true
 
