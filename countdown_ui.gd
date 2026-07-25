@@ -10,7 +10,7 @@ func _process(delta: float) -> void:
 
 	label.text = countdown_display_name(player.current_countdown) + ": " + str(
 		player.properties[player.current_countdown]
-	).pad_decimals(1)
+	).pad_decimals(2)
 
 func countdown_display_name(countdown: String):
 	if countdown == "size":
