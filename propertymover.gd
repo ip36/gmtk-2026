@@ -6,6 +6,9 @@ var root
 enum PropertyKey {size, speed, jump, gravity, block_size, world_size, health}
 @export var property: PropertyKey
 
+@onready var parent_cam = $"../../.."
+@onready var initial_cam_pos = parent_cam.global_position
+
 func _ready() -> void:
 	$AnimatedSprite2D.animation = texture
 	$AnimatedSprite2D.play()
@@ -17,6 +20,10 @@ func _process(delta: float) -> void:
 		global_position = get_global_mouse_position() - Vector2(16, 16)
 
 func clicked() -> void:
-	if get_parent() == origparent:
-		reparent(root)
+	# only reparent on placement click, so the pickup sprite stays on top
+	if moving:
+		if get_parent() == origparent:
+			var camera = get_node('../../..')
+			reparent(root)
+			position += camera.global_position - initial_cam_pos
 	moving = !moving

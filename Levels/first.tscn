@@ -8,6 +8,7 @@
 [ext_resource type="PackedScene" uid="uid://b8sr4ylekkbt7" path="res://edit_camera.tscn" id="5_x20rb"]
 [ext_resource type="Script" uid="uid://p3aaquet78tp" path="res://spikes.gd" id="7_axddo"]
 [ext_resource type="PackedScene" uid="uid://de0n66k81eic3" path="res://chest.tscn" id="8_l86q3"]
+[ext_resource type="PackedScene" uid="uid://bsxdnma2vgcy1" path="res://keybinds_legend_ui.tscn" id="9_3lral"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_ehkex"]
 texture = ExtResource("2_3lral")
@@ -268,3 +269,5 @@ shape = SubResource("RectangleShape2D_mkyii")
 
 [node name="AnimatedSprite2D" parent="." unique_id=1920964518 instance=ExtResource("8_l86q3")]
 position = Vector2(1056, 368)
+
+[node name="KeybindsLegendUI" parent="." unique_id=1630838996 instance=ExtResource("9_3lral")]
