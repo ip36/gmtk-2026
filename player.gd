@@ -1,21 +1,26 @@
 extends CharacterBody2D
 @export var properties = {"size" = 1.0,
-	"speed" = 10000.0,
-	"jumpspeed" = 500.0,
+	"speed" = 18000.0,
+	"jumpspeed" = 400.0,
 	"fallspeed" = 1000.0,
 	"blocksize" = 1.0,
-	"worldsize" = 1.0}
+	"worldsize" = 1.0,
+	"health" = 5.0}
 var reductions = []
 var current_countdown
 var current_countdown_index
 var reverse_gravity = false
 var changing_blocks = []
+@onready var health_bar: ProgressBar = $ProgressBar
 
 func _ready() -> void:
 	for i in properties:
 		reductions.append(properties[i]/10)
 	for i in get_tree().get_nodes_in_group("changing_blocks"):
 		changing_blocks.append(i)
+	
+	health_bar.visible = false
+	health_bar.max_value = properties["health"]
 
 func _process(delta: float) -> void:
 	if current_countdown:
@@ -37,6 +42,13 @@ func _process(delta: float) -> void:
 			for i in changing_blocks:
 				if i.scale > Vector2():
 					i.scale -= (Vector2(reductions[4], reductions[4]) * delta)
+		elif current_countdown == "health":
+			health_bar.visible = true
+			properties["health"] -= delta
+			health_bar.value = properties["health"]
+			if properties["health"] <= 0.0:
+				get_tree().call_deferred("reload_current_scene")
+			
 	var dir = Input.get_axis("left", "right")
 	velocity.x = dir * properties["speed"] * delta
 	if reverse_gravity or not is_on_floor():
