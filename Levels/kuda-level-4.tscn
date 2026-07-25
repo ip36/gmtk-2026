@@ -1,4 +1,4 @@
-[gd_scene format=4 uid="uid://xe5d7ubbary"]
+[gd_scene format=4 uid="uid://bmrahob2xn2l"]
 
 [ext_resource type="PackedScene" uid="uid://ctayfrsk7hvj5" path="res://player.tscn" id="1_0na3f"]
 [ext_resource type="Texture2D" uid="uid://cafgfqjwwfiac" path="res://Terrain (32x32).png" id="2_s66fy"]

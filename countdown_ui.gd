@@ -27,4 +27,6 @@ func countdown_display_name(countdown: String):
 		return "World Size"
 	if countdown == "health":
 		return "Health"
+	if countdown == "windspeed":
+			return "Wind Speed"
 	return countdown.capitalize()
