@@ -1,0 +1,19 @@
+[gd_resource type="AudioBusLayout" format=3 uid="uid://dfg7mgunc68uh"]
+
+[sub_resource type="AudioEffectEQ" id="AudioEffectEQ_j3pel"]
+resource_name = "EQ"
+band_db/100_hz = -2.4
+band_db/320_hz = 0.8
+band_db/1000_hz = -3.8
+band_db/3200_hz = -28.5
+band_db/10000_hz = -27.5
+
+[resource]
+bus/1/name = &"Tick"
+bus/1/solo = false
+bus/1/mute = false
+bus/1/bypass_fx = false
+bus/1/volume_db = 0.0
+bus/1/send = &"Master"
+bus/1/effect/0/effect = SubResource("AudioEffectEQ_j3pel")
+bus/1/effect/0/enabled = true
