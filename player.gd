@@ -69,7 +69,6 @@ func _process(delta: float) -> void:
 	if currentanim == null:
 		currentanim = "idle"
 	if $AnimatedSprite2D.animation != currentanim:
-		print(currentanim)
 		$AnimatedSprite2D.play(currentanim)
 
 func set_countdown(property) -> void:
