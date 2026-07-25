@@ -7,6 +7,7 @@
 [ext_resource type="PackedScene" uid="uid://b8sr4ylekkbt7" path="res://edit_camera.tscn" id="5_ndftt"]
 [ext_resource type="Script" uid="uid://bvihome1dq161" path="res://pickup_resource.gd" id="6_au0y0"]
 [ext_resource type="PackedScene" uid="uid://de0n66k81eic3" path="res://chest.tscn" id="7_quqa1"]
+[ext_resource type="PackedScene" uid="uid://bsxdnma2vgcy1" path="res://keybinds_legend_ui.tscn" id="9_eiavb"]
 
 [sub_resource type="Gradient" id="Gradient_ndftt"]
 offsets = PackedFloat32Array(0)
@@ -185,3 +186,5 @@ level_pickups = Array[ExtResource("6_au0y0")]([SubResource("Resource_xmtmr"), Su
 
 [node name="Chest" parent="." unique_id=1920964518 instance=ExtResource("7_quqa1")]
 position = Vector2(1639, 463)
+
+[node name="KeybindsLegendUI" parent="." unique_id=1630838996 instance=ExtResource("9_eiavb")]
