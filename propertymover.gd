@@ -20,6 +20,10 @@ func _process(delta: float) -> void:
 		global_position = get_global_mouse_position() - Vector2(16, 16)
 
 func clicked() -> void:
+	# do nothing if game is already playing. this prevents the pickup from being moved after edit mode.
+	if not get_tree().paused:
+		return
+	
 	# only reparent on placement click, so the pickup sprite stays on top
 	if moving:
 		if get_parent() == origparent:

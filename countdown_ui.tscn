@@ -1,0 +1,17 @@
+[gd_scene format=3 uid="uid://carh78kg05v6t"]
+
+[ext_resource type="Script" uid="uid://dwavtpjgoiuhr" path="res://countdown_ui.gd" id="1_jc8d6"]
+
+[node name="CountdownUI" type="CanvasLayer" unique_id=1041481789]
+script = ExtResource("1_jc8d6")
+
+[node name="Label" type="Label" parent="." unique_id=269079856]
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -20.0
+offset_top = 7.0
+offset_right = 20.0
+offset_bottom = 30.0
+grow_horizontal = 2
+horizontal_alignment = 1
