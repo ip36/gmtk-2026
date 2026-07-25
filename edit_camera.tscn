@@ -1,8 +1,118 @@
-[gd_scene format=3 uid="uid://b8sr4ylekkbt7"]
+[gd_scene format=4 uid="uid://b8sr4ylekkbt7"]
 
 [ext_resource type="Script" uid="uid://c1ruwr4106q8t" path="res://edit_camera.gd" id="1_u7ey7"]
+[ext_resource type="Texture2D" uid="uid://dam5r61nitlj2" path="res://Yellow Board (guide).png" id="2_s21p7"]
+[ext_resource type="Script" uid="uid://bytrpcot7pye5" path="res://gobutton.gd" id="4_g1vln"]
+
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_7u8h1"]
+texture = ExtResource("2_s21p7")
+separation = Vector2i(2, 2)
+texture_region_size = Vector2i(27, 27)
+0:0/0 = 0
+1:0/0 = 0
+2:0/0 = 0
+3:0/0 = 0
+0:1/0 = 0
+1:1/0 = 0
+2:1/0 = 0
+3:1/0 = 0
+0:2/0 = 0
+1:2/0 = 0
+2:2/0 = 0
+3:2/0 = 0
+0:3/0 = 0
+1:3/0 = 0
+2:3/0 = 0
+3:3/0 = 0
+
+[sub_resource type="TileSet" id="TileSet_2o3pi"]
+tile_size = Vector2i(27, 27)
+sources/1 = SubResource("TileSetAtlasSource_7u8h1")
+
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_buil1"]
+texture = ExtResource("2_s21p7")
+separation = Vector2i(5, 2)
+texture_region_size = Vector2i(27, 27)
+0:0/0 = 0
+1:0/0 = 0
+2:0/0 = 0
+3:0/0 = 0
+0:1/0 = 0
+1:1/0 = 0
+2:1/0 = 0
+3:1/0 = 0
+0:2/0 = 0
+1:2/0 = 0
+2:2/0 = 0
+3:2/0 = 0
+0:3/0 = 0
+1:3/0 = 0
+2:3/0 = 0
+3:3/0 = 0
+
+[sub_resource type="TileSet" id="TileSet_575dq"]
+tile_size = Vector2i(27, 27)
+sources/1 = SubResource("TileSetAtlasSource_buil1")
+
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_wylye"]
+texture = ExtResource("2_s21p7")
+margins = Vector2i(0, 5)
+separation = Vector2i(5, 2)
+texture_region_size = Vector2i(27, 27)
+0:0/0 = 0
+1:0/0 = 0
+2:0/0 = 0
+3:0/0 = 0
+0:1/0 = 0
+1:1/0 = 0
+2:1/0 = 0
+3:1/0 = 0
+0:2/0 = 0
+1:2/0 = 0
+2:2/0 = 0
+3:2/0 = 0
+0:3/0 = 0
+1:3/0 = 0
+2:3/0 = 0
+3:3/0 = 0
+
+[sub_resource type="TileSet" id="TileSet_nu273"]
+tile_size = Vector2i(27, 27)
+sources/1 = SubResource("TileSetAtlasSource_wylye")
 
 [node name="EditCamera" type="Camera2D" unique_id=467533933 groups=["editcamera"]]
 process_mode = 3
 script = ExtResource("1_u7ey7")
-cam_speed = 250.0
+
+[node name="EditModeUI" type="CanvasLayer" parent="." unique_id=1640737337]
+
+[node name="TileMapLayer2" type="TileMapLayer" parent="EditModeUI" unique_id=1172371242]
+position = Vector2(4, 0)
+tile_map_data = PackedByteArray("AAAAAAAAAQAAAAAAAAAAAAEAAQAAAAEAAAABAAAAAQABAAAAAAABAAEAAQABAAEAAAAAAAIAAQAAAAEAAAABAAIAAQABAAEAAAAAAAMAAQAAAAEAAAABAAMAAQABAAEAAAAAAAQAAQAAAAEAAAABAAQAAQABAAEAAAAAAAUAAQAAAAEAAAABAAUAAQABAAEAAAAAAAYAAQAAAAEAAAABAAYAAQABAAEAAAAAAAcAAQAAAAEAAAABAAcAAQABAAEAAAAAAAgAAQAAAAEAAAABAAgAAQABAAEAAAAAAAkAAQAAAAEAAAABAAkAAQABAAEAAAAAAAoAAQAAAAEAAAABAAoAAQABAAEAAAAAAAsAAQAAAAEAAAABAAsAAQABAAEAAAAAAAwAAQAAAAEAAAABAAwAAQABAAEAAAAAAA0AAQAAAAEAAAABAA0AAQABAAEAAAAAAA4AAQAAAAEAAAABAA4AAQABAAEAAAAAAA8AAQAAAAEAAAABAA8AAQABAAEAAAAAABAAAQAAAAEAAAABABAAAQABAAEAAAAAABEAAQAAAAEAAAABABEAAQABAAEAAAAAABIAAQAAAAEAAAABABIAAQABAAEAAAAAABMAAQAAAAEAAAABABMAAQABAAEAAAAAABQAAQAAAAEAAAABABQAAQABAAEAAAAAABUAAQAAAAEAAAABABUAAQABAAEAAAAAABYAAQAAAAEAAAABABYAAQABAAEAAAA=")
+tile_set = SubResource("TileSet_2o3pi")
+
+[node name="TileMapLayer3" type="TileMapLayer" parent="EditModeUI" unique_id=2106603108]
+position = Vector2(4, 0)
+tile_map_data = PackedByteArray("AAACAAAAAQACAAAAAAACAAEAAQACAAEAAAACAAIAAQACAAEAAAACAAMAAQACAAEAAAACAAQAAQACAAEAAAACAAUAAQACAAEAAAACAAYAAQACAAEAAAACAAcAAQACAAEAAAACAAgAAQACAAEAAAACAAkAAQACAAEAAAACAAoAAQACAAEAAAACAAsAAQACAAEAAAACAAwAAQACAAEAAAACAA0AAQACAAEAAAACAA4AAQACAAEAAAACAA8AAQACAAEAAAACABAAAQACAAEAAAACABEAAQACAAEAAAACABIAAQACAAEAAAACABMAAQACAAEAAAACABQAAQACAAEAAAACABUAAQACAAEAAAACABYAAQACAAEAAAA=")
+tile_set = SubResource("TileSet_575dq")
+
+[node name="TileMapLayer4" type="TileMapLayer" parent="EditModeUI" unique_id=1097126168]
+position = Vector2(4, 0)
+tile_map_data = PackedByteArray("AAAAABcAAQAAAAIAAAABABcAAQABAAIAAAACABcAAQACAAIAAAA=")
+tile_set = SubResource("TileSet_nu273")
+
+[node name="VBoxContainer" type="VBoxContainer" parent="EditModeUI" unique_id=938508998]
+anchors_preset = 9
+anchor_bottom = 1.0
+grow_vertical = 2
+theme_override_constants/separation = 40
+alignment = 1
+
+[node name="PlayButton" type="Button" parent="EditModeUI" unique_id=219543536]
+process_mode = 3
+offset_left = 1008.0
+offset_top = 560.0
+offset_right = 1150.0
+offset_bottom = 639.0
+text = "Play"
+script = ExtResource("4_g1vln")
