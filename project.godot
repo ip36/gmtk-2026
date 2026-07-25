@@ -25,7 +25,6 @@ LevelRestartListener="*uid://byx0mbcihcdjx"
 [display]
 
 window/stretch/mode="canvas_items"
-window/stretch/aspect="expand"
 
 [global_group]
 

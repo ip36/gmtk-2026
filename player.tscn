@@ -17,6 +17,7 @@
 [ext_resource type="Texture2D" uid="uid://cq4uqderjqqtb" path="res://Player/02-Run/Run 05.png" id="15_iruf7"]
 [ext_resource type="Texture2D" uid="uid://hq13ef4863s4" path="res://Player/02-Run/Run 06.png" id="16_j5n4i"]
 [ext_resource type="Texture2D" uid="uid://dbc6luwe0vjsa" path="res://Player/Particles.png" id="17_op7ga"]
+[ext_resource type="AudioStream" uid="uid://dsq71q5jaj5qa" path="res://switch13.ogg" id="18_q13i1"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_wicfh"]
 size = Vector2(32, 48)
@@ -153,7 +154,7 @@ limit_top = -8
 limit_right = 3011
 limit_bottom = 648
 
-[node name="ProgressBar" type="ProgressBar" parent="." unique_id=109839542]
+[node name="HealthBar" type="ProgressBar" parent="." unique_id=109839542]
 visible = false
 anchors_preset = 8
 anchor_left = 0.5
@@ -185,3 +186,9 @@ scale = Vector2(1.4999999, 1.4999999)
 sprite_frames = SubResource("SpriteFrames_cmelw")
 autoplay = "default"
 frame_progress = 0.736108
+
+[node name="TickDownSound" type="AudioStreamPlayer" parent="." unique_id=1115242029]
+stream = ExtResource("18_q13i1")
+volume_db = -16.697
+bus = &"Tick"
+parameters/looping = true
