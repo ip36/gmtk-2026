@@ -206,6 +206,6 @@ texture = "red"
 property = 6
 
 [node name="Chest" parent="." unique_id=1920964518 instance=ExtResource("7_quqa1")]
-position = Vector2(1627, 464)
+position = Vector2(1639, 463)
 
 [node name="KeybindsLegendUI" parent="." unique_id=1630838996 instance=ExtResource("9_eiavb")]

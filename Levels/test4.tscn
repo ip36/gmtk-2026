@@ -268,7 +268,6 @@ process_mode = 3
 layout_mode = 2
 flat = true
 texture = "blue"
-property = 3
 
 [node name="Area2D" type="Area2D" parent="." unique_id=1295011970]
 script = ExtResource("8_157cl")
