@@ -8,6 +8,7 @@
 [ext_resource type="Script" uid="uid://p3aaquet78tp" path="res://spikes.gd" id="6_ajrot"]
 [ext_resource type="PackedScene" uid="uid://dt0dgop73ssd1" path="res://propertymover.tscn" id="6_c665n"]
 [ext_resource type="PackedScene" uid="uid://de0n66k81eic3" path="res://chest.tscn" id="7_enlao"]
+[ext_resource type="PackedScene" uid="uid://bsxdnma2vgcy1" path="res://keybinds_legend_ui.tscn" id="9_mqywf"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_ehkex"]
 texture = ExtResource("2_n87mn")
@@ -186,3 +187,5 @@ shape = SubResource("RectangleShape2D_n87mn")
 [node name="CollisionShape2D4" type="CollisionShape2D" parent="Area2D" unique_id=1391405210]
 position = Vector2(672, 440)
 shape = SubResource("RectangleShape2D_mqywf")
+
+[node name="KeybindsLegendUI" parent="." unique_id=1630838996 instance=ExtResource("9_mqywf")]
