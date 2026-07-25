@@ -14,6 +14,7 @@ var changing_blocks = []
 var colors = [Color(255.014, 0.0, 255.014, 1.0), Color(0.851, 0.753, 0.0, 1.0), Color(0.0, 0.0, 1.0, 1.0), Color(0.0, 1.0, 1.0, 1.0), Color(0.475, 0.235, 0.0, 1.0), Color(0.0, 1.0, 0.0, 1.0), Color(1.0, 0.0, 0.0, 1.0)]
 var currentanim
 var starting_property_values
+var wind_movement: Vector2
 @onready var health_bar: ProgressBar = $HealthBar
 @onready var tick_down_sound: AudioStreamPlayer = $TickDownSound
 
@@ -72,6 +73,7 @@ func _process(delta: float) -> void:
 			currentanim = "jump"
 	elif Input.is_action_pressed("up"):
 		velocity.y = -properties["jumpspeed"] * scale.x
+	velocity += wind_movement
 	move_and_slide()
 	if currentanim == null:
 		currentanim = "idle"
