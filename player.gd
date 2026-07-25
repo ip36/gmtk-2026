@@ -12,6 +12,8 @@ var current_countdown_index
 var reverse_gravity = false
 var changing_blocks = []
 @onready var health_bar: ProgressBar = $ProgressBar
+var colors = [Color(255.014, 0.0, 255.014, 1.0), Color(0.851, 0.753, 0.0, 1.0), Color(0.0, 0.0, 1.0, 1.0), Color(0.0, 1.0, 1.0, 1.0), Color(0.475, 0.235, 0.0, 1.0), Color(0.0, 1.0, 0.0, 1.0), Color(1.0, 0.0, 0.0, 1.0)]
+var currentanim
 
 func _ready() -> void:
 	for i in properties:
@@ -23,6 +25,7 @@ func _ready() -> void:
 	health_bar.max_value = properties["health"]
 
 func _process(delta: float) -> void:
+	currentanim = null
 	if current_countdown:
 		properties[current_countdown] -= reductions[current_countdown_index] * delta
 		if current_countdown == "fallspeed" and properties["fallspeed"] < 0:
@@ -48,15 +51,29 @@ func _process(delta: float) -> void:
 			health_bar.value = properties["health"]
 			if properties["health"] <= 0.0:
 				get_tree().call_deferred("reload_current_scene")
-			
 	var dir = Input.get_axis("left", "right")
+	if velocity.x != 0 and is_on_floor():
+		currentanim = "run"
+	if dir != 0:
+		$AnimatedSprite2D.flip_h = (dir == -1)
 	velocity.x = dir * properties["speed"] * delta
 	if reverse_gravity or not is_on_floor():
 		velocity.y += properties["fallspeed"] * delta
+		if velocity.y > 0 or reverse_gravity:
+			currentanim = "fall"
+		else:
+			currentanim = "jump"
 	elif Input.is_action_pressed("up"):
 		velocity.y = -properties["jumpspeed"] * scale.x
 	move_and_slide()
+	if currentanim == null:
+		currentanim = "idle"
+	if $AnimatedSprite2D.animation != currentanim:
+		print(currentanim)
+		$AnimatedSprite2D.play(currentanim)
 
 func set_countdown(property) -> void:
 	current_countdown = properties.keys()[property]
 	current_countdown_index = property
+	$AnimatedSprite2D2.modulate = colors[property]
+	$AnimatedSprite2D2.visible = true
