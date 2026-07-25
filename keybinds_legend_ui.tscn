@@ -1,0 +1,22 @@
+[gd_scene format=3 uid="uid://bsxdnma2vgcy1"]
+
+[node name="KeybindsLegendUI" type="CanvasLayer" unique_id=1630838996]
+
+[node name="HBoxContainer" type="HBoxContainer" parent="." unique_id=268061494]
+anchors_preset = 12
+anchor_top = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_top = -45.0
+grow_horizontal = 2
+grow_vertical = 0
+alignment = 1
+
+[node name="RestartLevelLabel" type="RichTextLabel" parent="HBoxContainer" unique_id=809349457]
+layout_mode = 2
+bbcode_enabled = true
+text = "[img width=30]res://Keyboard R.png[/img] Restart Level"
+fit_content = true
+scroll_active = false
+autowrap_mode = 0
+vertical_alignment = 1
