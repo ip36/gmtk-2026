@@ -1,0 +1,7 @@
+[gd_resource type="AtlasTexture" format=3 uid="uid://dt7yfmg5yut8b"]
+
+[ext_resource type="Texture2D" uid="uid://dkty4b2dhmmuw" path="res://Terrain and Back Wall (32x32).png" id="1_rah43"]
+
+[resource]
+atlas = ExtResource("1_rah43")
+region = Rect2(512, 128, 65, 64)

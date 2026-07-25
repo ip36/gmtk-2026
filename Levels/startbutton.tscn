@@ -1,0 +1,16 @@
+[gd_scene format=3 uid="uid://c5qv4t5tmnme2"]
+
+[ext_resource type="Theme" uid="uid://bci3f3stek4v5" path="res://buttontheme.tres" id="1_kv8gq"]
+[ext_resource type="Script" uid="uid://bytrpcot7pye5" path="res://gobutton.gd" id="2_frofq"]
+
+[node name="Button" type="Button" unique_id=1610856913]
+process_mode = 3
+offset_left = 1008.0
+offset_top = 560.0
+offset_right = 1150.0
+offset_bottom = 639.0
+theme = ExtResource("1_kv8gq")
+text = "Play"
+flat = true
+icon_alignment = 1
+script = ExtResource("2_frofq")

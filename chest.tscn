@@ -35,7 +35,7 @@ animations = [{
 }]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_wicfh"]
-size = Vector2(64, 40)
+size = Vector2(64, 32)
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" unique_id=1920964518]
 process_mode = 3
@@ -53,5 +53,4 @@ color = Color(1, 1, 1, 0)
 [node name="Area2D" type="Area2D" parent="." unique_id=1727511437]
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D" unique_id=1146832007]
-position = Vector2(0, 4)
 shape = SubResource("RectangleShape2D_wicfh")
