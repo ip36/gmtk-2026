@@ -531,32 +531,6 @@ sprite_frames = SubResource("SpriteFrames_wicfh")
 autoplay = "default"
 frame_progress = 0.19212772
 
-[node name="Button15" type="Button" parent="CenterContainer/GridContainer" unique_id=1013874498]
-custom_minimum_size = Vector2(200, 100)
-layout_mode = 2
-theme = ExtResource("1_8h15g")
-text = "14"
-flat = true
-icon_alignment = 1
-expand_icon = true
-script = ExtResource("2_eo15b")
-where = "Levels/Level14"
-
-[node name="Label" type="Label" parent="CenterContainer/GridContainer/Button15" unique_id=1509027157]
-layout_mode = 0
-offset_left = 137.0
-offset_top = 84.0
-offset_right = 200.0
-offset_bottom = 107.0
-
-[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="CenterContainer/GridContainer/Button15" unique_id=2039623113]
-visible = false
-position = Vector2(5.9999924, 72)
-scale = Vector2(0.19921875, 0.19921875)
-sprite_frames = SubResource("SpriteFrames_wicfh")
-autoplay = "default"
-frame_progress = 0.19212772
-
 [node name="Button" type="Button" parent="." unique_id=1577995409]
 custom_minimum_size = Vector2(300, 60)
 layout_mode = 0

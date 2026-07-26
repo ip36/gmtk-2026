@@ -125,7 +125,7 @@ layout_mode = 2
 [node name="Label" type="Label" parent="CenterContainer/VBoxContainer" unique_id=2104288731]
 layout_mode = 2
 theme = ExtResource("1_1n0d2")
-text = "Game name"
+text = "Potions of piracy"
 
 [node name="Button" type="Button" parent="CenterContainer/VBoxContainer" unique_id=172891904]
 custom_minimum_size = Vector2(0, 100)
@@ -136,7 +136,8 @@ flat = true
 icon_alignment = 1
 expand_icon = true
 script = ExtResource("3_oiuna")
-where = "options"
+where = "Levels/Level1"
+override = true
 
 [node name="Button2" type="Button" parent="CenterContainer/VBoxContainer" unique_id=705145309]
 custom_minimum_size = Vector2(0, 100)

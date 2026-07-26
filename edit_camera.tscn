@@ -84,6 +84,10 @@ sources/1 = SubResource("TileSetAtlasSource_wylye")
 [node name="EditCamera" type="Camera2D" unique_id=467533933 groups=["editcamera"]]
 process_mode = 3
 z_index = -2
+limit_left = 0
+limit_top = 0
+limit_right = 1152
+limit_bottom = 648
 script = ExtResource("1_u7ey7")
 
 [node name="EditModeUI" type="CanvasLayer" parent="." unique_id=1640737337]
@@ -121,6 +125,9 @@ metadata/_edit_use_anchors_ = true
 [node name="PlayButton" type="Button" parent="EditModeUI" unique_id=219543536]
 process_mode = 3
 z_index = -2
+anchors_preset = -1
+anchor_left = -0.013888889
+anchor_top = -0.024691358
 offset_left = 1000.0
 offset_top = 568.0
 offset_right = 1152.0

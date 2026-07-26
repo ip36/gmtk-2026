@@ -23,6 +23,7 @@
 [ext_resource type="Texture2D" uid="uid://byaiibnpk8p6j" path="res://Red Potion/05.png" id="21_kqbfk"]
 [ext_resource type="Texture2D" uid="uid://bybhpgtb8evb" path="res://Red Potion/06.png" id="22_1s4vr"]
 [ext_resource type="Texture2D" uid="uid://d2gkr6yhk5d5q" path="res://Red Potion/07.png" id="23_1ri5x"]
+[ext_resource type="Theme" uid="uid://be8smmq0ql3ip" path="res://labeltheme.tres" id="24_7kv0t"]
 
 [sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_xmtmr"]
 
@@ -148,10 +149,13 @@ anchors_preset = 5
 anchor_left = 0.5
 anchor_right = 0.5
 offset_left = -22.0
-offset_top = -12.0
+offset_top = -34.0
 offset_right = 22.0
-offset_bottom = 2.0
+offset_bottom = -19.0
 grow_horizontal = 2
-theme_override_font_sizes/font_size = 8
+theme = ExtResource("24_7kv0t")
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_font_sizes/font_size = 12
 horizontal_alignment = 1
 vertical_alignment = 2
+autowrap_mode = 2

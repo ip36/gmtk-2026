@@ -150,10 +150,10 @@ shape = SubResource("RectangleShape2D_wicfh")
 [node name="Camera2D" type="Camera2D" parent="." unique_id=1222985887]
 enabled = false
 zoom = Vector2(2.025, 2.025)
-limit_left = 160
-limit_top = -8
+limit_left = -200
+limit_top = -200
 limit_right = 3011
-limit_bottom = 648
+limit_bottom = 800
 
 [node name="HealthBar" type="ProgressBar" parent="." unique_id=109839542]
 z_index = 1

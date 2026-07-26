@@ -1,7 +1,12 @@
 [gd_scene format=3 uid="uid://byx0mbcihcdjx"]
 
 [ext_resource type="Script" uid="uid://dqahy770felo0" path="res://level_restart_listener.gd" id="1_c5ncn"]
+[ext_resource type="AudioStream" uid="uid://dqgllsfmvxvbi" path="res://GMTK2026.mp3" id="2_md76x"]
 
 [node name="LevelRestartListener" type="Node" unique_id=1278956573]
 process_mode = 3
 script = ExtResource("1_c5ncn")
+
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="." unique_id=1552272304]
+stream = ExtResource("2_md76x")
+autoplay = true
