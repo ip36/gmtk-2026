@@ -22,3 +22,13 @@ fit_content = true
 scroll_active = false
 autowrap_mode = 0
 vertical_alignment = 1
+
+[node name="RestartLevelLabel2" type="RichTextLabel" parent="HBoxContainer" unique_id=1080848814]
+layout_mode = 2
+mouse_filter = 2
+bbcode_enabled = true
+text = "[img width=30]res://Keyboard M.png[/img] Return to menu"
+fit_content = true
+scroll_active = false
+autowrap_mode = 0
+vertical_alignment = 1
