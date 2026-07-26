@@ -9,7 +9,7 @@ func _ready() -> void:
 		var sum = 0
 		for i in Variables.times.values():
 			sum += i
-		$"../Label2".text = "Your time: " + str(sum)
+		$"../Label2".text = "Your time: " + str(sum).pad_decimals(2)
 	connect("pressed", func clicked():
 		if override:
 			Variables.currentlevel = 0

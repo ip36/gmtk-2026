@@ -34,5 +34,5 @@ func clicked() -> void:
 			var camera = get_node('../../..')
 			reparent(root)
 			if get_tree().current_scene.scene_file_path == "res://Levels/Level13.tscn":
-				position += camera.global_position - initial_cam_pos
+				global_position += camera.global_position - initial_cam_pos
 	moving = !moving
