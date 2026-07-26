@@ -128,6 +128,7 @@ theme = ExtResource("2_jxqs6")
 text = "Thanks for playing!"
 
 [node name="Button" type="Button" parent="CenterContainer/VBoxContainer" unique_id=172891904]
+process_mode = 3
 custom_minimum_size = Vector2(0, 100)
 layout_mode = 2
 theme = ExtResource("3_srs46")

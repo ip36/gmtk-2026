@@ -5,6 +5,7 @@ extends Button
 @export var override2 : bool
 
 func _ready() -> void:
+	get_tree().paused = false
 	if override2:
 		var sum = 0
 		for i in Variables.times.values():
