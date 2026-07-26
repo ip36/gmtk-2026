@@ -5,16 +5,19 @@ extends CharacterBody2D
 	"fallspeed" = 1000.0,
 	"blocksize" = 1.0,
 	"worldsize" = 1.0,
-	"health" = 6.5}
+	"health" = 6.5,
+	"windspeed" = 1.0}
 var reductions = []
 var current_countdown
 var current_countdown_index
 var reverse_gravity = false
 var changing_blocks = []
-var colors = [Color(255.014, 0.0, 255.014, 1.0), Color(0.851, 0.753, 0.0, 1.0), Color(0.0, 0.0, 1.0, 1.0), Color(0.0, 1.0, 1.0, 1.0), Color(0.475, 0.235, 0.0, 1.0), Color(0.0, 1.0, 0.0, 1.0), Color(1.0, 0.0, 0.0, 1.0)]
+var colors = [Color(255.014, 0.0, 255.014, 1.0), Color(0.851, 0.753, 0.0, 1.0), Color(0.0, 0.0, 1.0, 1.0), Color(0.0, 1.0, 1.0, 1.0), Color(0.475, 0.235, 0.0, 1.0), Color(0.0, 1.0, 0.0, 1.0), Color(1.0, 0.0, 0.0, 1.0), Color(0.7, 0.7, 0.9, 1.0)]
 var currentanim
 var cheese_zone_placements = 0
 var starting_property_values
+var wind_movement: Vector2
+var is_in_wind: bool = false
 @onready var health_bar: ProgressBar = $HealthBar
 @onready var tick_down_sound: AudioStreamPlayer = $TickDownSound
 @export var potions : int
@@ -26,7 +29,7 @@ func _ready() -> void:
 		starting_property_values[i] = properties[i]
 	for i in get_tree().get_nodes_in_group("changing_blocks"):
 		changing_blocks.append(i)
-	
+
 	health_bar.visible = false
 	$TextureRect.visible = false
 	health_bar.max_value = properties["health"]
@@ -61,6 +64,12 @@ func _process(delta: float) -> void:
 			health_bar.value = properties["health"]
 			if properties["health"] <= 0.0:
 				get_tree().call_deferred("reload_current_scene")
+		elif current_countdown == "windspeed":
+			var wind_zones = get_tree().get_nodes_in_group("wind")
+			properties["windspeed"] -= delta / 3
+			for zone in wind_zones:
+				zone.speed_multiplier = properties["windspeed"]
+
 	var dir = Input.get_axis("left", "right")
 	if velocity.x != 0 and is_on_floor():
 		currentanim = "run"
@@ -75,6 +84,8 @@ func _process(delta: float) -> void:
 			currentanim = "jump"
 	elif Input.is_action_pressed("up"):
 		velocity.y = -properties["jumpspeed"] * scale.x
+	if is_in_wind:
+		velocity += wind_movement
 	move_and_slide()
 	if currentanim == null:
 		currentanim = "idle"
