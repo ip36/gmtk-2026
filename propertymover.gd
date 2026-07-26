@@ -5,6 +5,7 @@ var root
 @export var texture : String
 enum PropertyKey {size, speed, jump, gravity, block_size, world_size, health}
 @export var property: PropertyKey
+var placed
 
 @onready var parent_cam = $"../../.."
 @onready var initial_cam_pos = parent_cam.global_position
@@ -16,6 +17,9 @@ func _ready() -> void:
 	root = get_tree().get_first_node_in_group("root")
 
 func _process(delta: float) -> void:
+	if Input.is_action_pressed("menu"):
+		get_tree().paused = false
+		get_tree().change_scene_to_file("res://start.tscn")
 	if moving:
 		global_position = get_global_mouse_position() - Vector2(16, 16)
 

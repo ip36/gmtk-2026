@@ -13,9 +13,11 @@ var reverse_gravity = false
 var changing_blocks = []
 var colors = [Color(255.014, 0.0, 255.014, 1.0), Color(0.851, 0.753, 0.0, 1.0), Color(0.0, 0.0, 1.0, 1.0), Color(0.0, 1.0, 1.0, 1.0), Color(0.475, 0.235, 0.0, 1.0), Color(0.0, 1.0, 0.0, 1.0), Color(1.0, 0.0, 0.0, 1.0)]
 var currentanim
+var cheese_zone_placements = 0
 var starting_property_values
 @onready var health_bar: ProgressBar = $HealthBar
 @onready var tick_down_sound: AudioStreamPlayer = $TickDownSound
+@export var potions : int
 
 func _ready() -> void:
 	starting_property_values = {}
@@ -30,6 +32,7 @@ func _ready() -> void:
 	health_bar.max_value = properties["health"]
 
 func _process(delta: float) -> void:
+	Variables.times[get_tree().current_scene.scene_file_path] += delta
 	currentanim = null
 	if current_countdown:
 		tick_down_sound.pitch_scale = 0.2 + absf((properties[current_countdown] / starting_property_values[current_countdown] / 1.5))
