@@ -22,6 +22,10 @@ func _process(delta: float) -> void:
 				player.cheese_zone_placements += 1
 
 func collected(whocollected) -> void:
+	if not get_parent().visible:
+		return
+	
 	if whocollected == player:
 		player.set_countdown(property)
-		get_parent().queue_free()
+		get_parent().visible = false
+		#get_parent().queue_free()

@@ -18,11 +18,13 @@ var cheese_zone_placements = 0
 var starting_property_values
 var wind_movement: Vector2
 var is_in_wind: bool = false
+var start_pos: Vector2
 @onready var health_bar: ProgressBar = $HealthBar
 @onready var tick_down_sound: AudioStreamPlayer = $TickDownSound
 @export var potions : int
 
 func _ready() -> void:
+	start_pos = global_position
 	starting_property_values = {}
 	for i in properties:
 		reductions.append(properties[i]/10)
@@ -33,6 +35,52 @@ func _ready() -> void:
 	health_bar.visible = false
 	$TextureRect.visible = false
 	health_bar.max_value = properties["health"]
+
+func _input(event: InputEvent) -> void:
+	if event.is_action_pressed("restart_level"):
+		restart()
+
+func restart():
+	tick_down_sound.stop()
+
+	current_countdown = null
+
+	for i in properties:
+		properties[i] = starting_property_values[i]
+
+	scale = Vector2.ONE
+	$Camera2D.zoom = Vector2.ONE * 2.025
+
+	for i in changing_blocks:
+		if i.scale > Vector2():
+			i.scale = Vector2.ONE
+
+	health_bar.visible = false
+	$TextureRect.visible = false
+
+	$AnimatedSprite2D2.visible = false
+
+	is_in_wind = false
+	wind_movement = Vector2.ZERO
+
+	velocity = Vector2.ZERO
+
+	# wtf is the cheese zone
+	cheese_zone_placements = 0
+
+	global_position = start_pos
+
+	for p in get_tree().get_nodes_in_group("pickup"):
+		p.visible = true
+
+	await get_tree().process_frame
+	await get_tree().process_frame
+
+	get_tree().paused = true
+	var ecam = get_tree().get_first_node_in_group("editcamera")
+	ecam.enabled = true
+	ecam.edit_mode_ui.visible = true
+	get_tree().get_first_node_in_group("player").get_node("Camera2D").enabled = false
 
 func _process(delta: float) -> void:
 	Variables.times[get_tree().current_scene.scene_file_path] += delta
@@ -46,13 +94,13 @@ func _process(delta: float) -> void:
 		elif current_countdown == "size":
 			scale -= Vector2(reductions[0], reductions[0]) * delta
 			if scale.x <= 0:
-				get_tree().call_deferred("reload_current_scene")
+				restart()
 		elif current_countdown == "worldsize":
 			scale += Vector2(reductions[5], reductions[5]) * delta
 			if $Camera2D.zoom.x > 1.1:
 				$Camera2D.zoom = 2.025 * Vector2(properties["worldsize"], properties["worldsize"])
 			if is_on_ceiling() and is_on_floor():
-				get_tree().call_deferred("reload_current_scene")
+				restart()
 		elif current_countdown == "blocksize":
 			for i in changing_blocks:
 				if i.scale > Vector2():
@@ -63,7 +111,7 @@ func _process(delta: float) -> void:
 			properties["health"] -= delta
 			health_bar.value = properties["health"]
 			if properties["health"] <= 0.0:
-				get_tree().call_deferred("reload_current_scene")
+				restart()
 		elif current_countdown == "windspeed":
 			var wind_zones = get_tree().get_nodes_in_group("wind")
 			properties["windspeed"] -= delta / 3
