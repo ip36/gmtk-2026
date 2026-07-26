@@ -5,7 +5,7 @@ func _ready() -> void:
 	get_tree().paused = true
 
 func clicked() -> void:
-	visible = false
+	#visible = false
 	get_tree().paused = false
 	get_tree().get_first_node_in_group("editcamera").enabled = false
 	get_tree().get_first_node_in_group("player").get_node("Camera2D").enabled = true

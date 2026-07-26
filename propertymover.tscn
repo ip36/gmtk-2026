@@ -115,7 +115,7 @@ animations = [{
 "speed": 5.0
 }]
 
-[node name="Button" type="Button" unique_id=1337859041]
+[node name="Button" type="Button" unique_id=1337859041 groups=["pickup"]]
 process_mode = 3
 custom_minimum_size = Vector2(32, 32)
 offset_left = -16.0

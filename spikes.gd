@@ -5,4 +5,5 @@ func _ready() -> void:
 
 func kill(who) -> void:
 	if who.is_in_group("player"):
-		get_tree().call_deferred("reload_current_scene")
+		who.restart()
+		# get_tree().call_deferred("reload_current_scene")
